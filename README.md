@@ -3,21 +3,19 @@ SaySound-Lite-Lite-Edition
 
 SourceMod / SayCommand plugin.
 
-説明
+Description
 --
 
-http://casko.adam.ne.jp/script.html のSaysoundLEのもっと軽量化したバージョン
+A lite version of http://casko.adam.ne.jp/script.html
 
 
-cfgフォーマット
+cfg Format
 ---------
 
-機能の削減により記述可能な物は下記のみです。sayで音を鳴らす機能のみに絞られています。  
-ファイルのダウンロード指定は行えません。全てのファイルのダウンロードを試みます。
+ - "file"		File path of sound file, relative path from csgo/sound.
+ - "text"  Text of saysounds.
 
- - "file"		ファイルパスの指定。csgo\soundフォルダからの相対パスを記述する
-
-cfgサンプル
+cfg Sample
 -------
 
     "Sound Combinations"
@@ -25,6 +23,7 @@ cfgサンプル
     	"foo"
     	{
     		"file"	"misc/test/foo.mp3"
+      "text" "this is foo message"
     	}
     	"foobar"
     	{
