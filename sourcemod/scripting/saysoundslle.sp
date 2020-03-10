@@ -108,14 +108,12 @@ public void OnClientAuthorized(int client, const char[] auth)
     g_lastplay[client] = 0.0;
 }
 
-
 public void OnClientCookiesCached(int client) {
     char  buffer[11];
     GetClientCookie(client, g_Cookie_SaysoundVol, buffer, sizeof(buffer));
     if (strlen(buffer) > 0) {
         g_fSaysoundVolume[client] = StringToFloat(buffer);
-        PrintToChat(client, "%s  %.2f", buffer, g_fSaysoundVolume[client]);
-    }
+    } else  g_fSaysoundVolume[client] = 1.0;
 }
 
 bool ClientHasSaysoundEnabled(int client) {
